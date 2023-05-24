@@ -20,6 +20,11 @@ A UI component library for [evently](https://github.com/mastersam07/evently/exam
 
 > For now it's just "bare metal" code
 
+## Inspiration
+
+The inspiration behind this theming style is [smarty](https://github.com/mastersam07/smarty) and [catalyst_ui](https://github.com/ptrbrynt/catalyst_ui)
+
+
 ## Features
 
 TODO: List what your package can do. Maybe include images, gifs, or videos.
