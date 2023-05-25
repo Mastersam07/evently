@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../typography.dart';
+import '../styles/typography.dart';
 
 /// Create a [EventlyThemeData] that's used to configure a [EventlyTheme].
 @immutable

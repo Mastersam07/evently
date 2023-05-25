@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFFFFFFFF),
+      color: EventColors.primary,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -69,25 +69,28 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.of(context).pop(),
-                child: const Icon(Coolicons.skip_previous),
-              ),
-              Text(
-                'Tap here',
-                style: EventlyTheme.of(context)!.typography.body,
-              )
-            ],
-          ),
-          const Text('Samuel'),
-        ],
+    return Container(
+      color: EventColors.secondary,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: () => Navigator.of(context).pop(),
+                  child: const Icon(Coolicons.skip_previous),
+                ),
+                Text(
+                  'Tap here',
+                  style: EventlyTheme.of(context)!.typography.body,
+                )
+              ],
+            ),
+            const Text('Samuel'),
+          ],
+        ),
       ),
     );
   }
