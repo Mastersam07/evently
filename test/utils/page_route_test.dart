@@ -6,7 +6,7 @@ void main() {
     await tester.pumpWidget(
       EventApp(
         home: const Text('Page 1'),
-        theme: EventlyThemeData(),
+        theme: const EventlyThemeData(),
         routes: <String, WidgetBuilder>{
           '/next': (BuildContext context) {
             return const Text('Page 2');

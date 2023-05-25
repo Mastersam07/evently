@@ -11,3 +11,4 @@ export './src/theme/evently_theme_data.dart';
 export 'src/styles/typography.dart';
 export 'src/utils/page_route.dart';
 export 'src/styles/colors.dart';
+export './src/components/avatar/avatar.dart';

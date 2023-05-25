@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return EventApp(
+    return const EventApp(
       title: 'Flutter Demo',
       theme: EventlyThemeData(
-        typography: const Typography(
+        typography: Typography(
           body: TextStyle(color: Color(0xFF000000)),
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -38,26 +38,19 @@ class MyHomePage extends StatelessWidget {
           const Text(
             'You have pushed the button this many times:',
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () => Navigator.push(
-                  context,
-                  EventRoute<void>(
-                    builder: (BuildContext context) {
-                      return const Details();
-                    },
+          GestureDetector(
+              onTap: () => Navigator.push(
+                    context,
+                    EventRoute<void>(
+                      builder: (BuildContext context) {
+                        return const Details();
+                      },
+                    ),
                   ),
-                ),
-                child: const Icon(Coolicons.play_arrow),
-              ),
-              Text(
-                'Tap here',
-                style: EventlyTheme.of(context)!.typography.body,
-              )
-            ],
-          ),
+              child: const EventAvatar(
+                avatarImage: NetworkImage(
+                    "https://avatars.githubusercontent.com/u/31275429?v=4"),
+              )),
         ],
       ),
     );
@@ -84,7 +77,7 @@ class Details extends StatelessWidget {
                 ),
                 Text(
                   'Tap here',
-                  style: EventlyTheme.of(context)!.typography.body,
+                  style: EventlyTheme.of(context)!.data.typography.body,
                 )
               ],
             ),

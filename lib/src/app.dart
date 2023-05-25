@@ -231,11 +231,12 @@ class _EventAppState extends State<EventApp> {
 
     return EventlyTheme(
       data: useDarkTheme
-          ? widget.darkTheme ?? EventlyThemeData.dark()
-          : widget.theme ?? EventlyThemeData.light(),
+          ? widget.darkTheme ?? const EventlyThemeData()
+          : widget.theme ?? const EventlyThemeData(),
       child: Builder(builder: (context) {
         return DefaultTextStyle(
-          style: EventlyTheme.of(context)?.typography.body ?? const TextStyle(),
+          style: EventlyTheme.of(context)?.data.typography.body ??
+              const TextStyle(),
           child: child!,
         );
       }),
@@ -250,8 +251,9 @@ class _EventAppState extends State<EventApp> {
     // Android's switcher UI.
     //
     // blue is the primary color of the default theme.
-    final Color eventlyColor =
-        widget.color ?? widget.theme?.primaryColor ?? const Color(0xFF5669FF);
+    final Color eventlyColor = widget.color ??
+        widget.theme?.primaryColor as Color? ??
+        const Color(0xFF5669FF);
     if (_usesRouter) {
       return WidgetsApp.router(
         key: GlobalObjectKey(this),

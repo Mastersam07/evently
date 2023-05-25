@@ -27,8 +27,8 @@ class EventlyTheme extends InheritedWidget {
   /// The theme data for evently.
   final EventlyThemeData data;
 
-  static EventlyThemeData? of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<EventlyTheme>()?.data;
+  static EventlyTheme? of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<EventlyTheme>();
   }
 
   @override
