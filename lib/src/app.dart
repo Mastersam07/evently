@@ -1,7 +1,6 @@
-import 'package:evently/page_route.dart';
-import 'package:evently/src/theme/evently_theme.dart';
-import 'package:evently/src/theme/evently_theme_data.dart';
-import 'package:flutter/cupertino.dart';
+import 'dart:ui';
+
+import 'package:evently/evently.dart';
 
 /// Describes which theme will be used by [EventApp].
 enum EventlyThemeMode {
