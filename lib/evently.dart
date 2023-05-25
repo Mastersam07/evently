@@ -1,7 +1,12 @@
+// Evently UI library.
 library evently;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+// Widgets
+export 'package:flutter/widgets.dart' hide TextStyle;
+export 'package:flutter/painting.dart';
+
+export './src/app.dart';
+export './src/theme/evently_theme.dart';
+export './src/theme/evently_theme_data.dart';
+export './src/typography.dart';
+export './page_route.dart';

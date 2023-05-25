@@ -2,3 +2,14 @@ include: package:flutter_lints/flutter.yaml
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+
+analyzer:
+  plugins:
+    - dart_code_metrics
+dart_code_metrics:
+  rules:
+    - avoid-banned-imports:
+        entries:
+        - paths: ['lib/.*\.dart']
+          deny: ["package:flutter/material.dart"]
+          message: "Do not import material as we should not depend on it!"
